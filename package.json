@@ -1,0 +1,37 @@
+{
+  "name": "pacific-gas-fronted",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "element-plus": "^2.3.3",
+    "mitt": "^3.0.0",
+    "particles.vue3": "^2.9.3",
+    "swiper": "^9.2.4",
+    "three": "^0.152.2",
+    "tsparticles": "^2.9.3",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "@types/three": "^0.152.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/tsconfig": "^0.1.3",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "~4.8.4",
+    "vite": "^4.1.4",
+    "vue-i18n": "^9.2.2",
+    "vue-tsc": "^1.2.0"
+  }
+}
