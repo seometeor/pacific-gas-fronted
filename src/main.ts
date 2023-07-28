@@ -11,6 +11,10 @@ router.afterEach((to, from, next) => {
     window.scrollTo(0, 0);
 })
 
+window.onbeforeunload = function () {
+    sessionStorage.removeItem('isChActive')
+}
+
 const app = createApp(App)
 
 app.use(router)

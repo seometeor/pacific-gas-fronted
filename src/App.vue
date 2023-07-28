@@ -2,23 +2,35 @@
   <div style="text-align: center">
     <el-container style="position: relative;">
       <el-header style="padding: 0;height: 100%;">
-        <Header />
+        <HeaderMobile v-if="isMobile()" />
+        <Header v-else />
       </el-header>
       <el-main style="padding: 0;height: 100%; margin-top: 8vh;">
         <RouterView />
       </el-main>
     </el-container>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import Header from '@/components/Header.vue'
+import { RouterView, useRouter } from 'vue-router'
 import { onMounted } from 'vue';
+import Header from '@/components/PC/Header.vue';
+import HeaderMobile from './components/Mobile/HeaderMobile.vue';
+
+const router = useRouter();
+const isMobile = () => {
+  let flag = navigator.userAgent.match(
+    /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  );
+  return flag;
+}
 onMounted(() => {
-  window.onbeforeunload = function (e) {
-    var storage = window.localStorage;
-    storage.clear()
+  if (isMobile()) {
+    router.replace('/homeMobile');
+  } else {
+    router.replace('/homePC');
   }
 })
 </script>
