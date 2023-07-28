@@ -30,7 +30,7 @@ export default defineConfig({
       }
     }
   },
-  base: './',
+  base: '/REPONAME/',
   build: {
     outDir: 'docs'
   },
