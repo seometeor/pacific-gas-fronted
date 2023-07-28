@@ -30,7 +30,7 @@ export default defineConfig({
       }
     }
   },
-  base: '/REPONAME/',
+  base: '/pacific-gas-fronted/',
   build: {
     outDir: 'docs'
   },
