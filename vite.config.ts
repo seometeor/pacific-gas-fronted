@@ -30,7 +30,7 @@ export default defineConfig({
       }
     }
   },
-  base: '/pacific-gas-fronted/',
+  base: './',
   build: {
     outDir: 'docs'
   },
